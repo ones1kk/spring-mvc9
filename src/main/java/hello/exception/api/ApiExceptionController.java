@@ -18,6 +18,10 @@ public class ApiExceptionController {
             throw new RuntimeException("illegal user");
         }
 
+        if(id.equals("bad")) {
+            throw new IllegalArgumentException("invalid input value");
+        }
+
         return new MemberDto(id, "hello" + id);
     }
 
